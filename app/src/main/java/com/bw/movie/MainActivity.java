@@ -1,9 +1,11 @@
 package com.bw.movie;
 
+import android.app.Person;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
