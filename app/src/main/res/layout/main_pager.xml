@@ -5,12 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-    <android.support.v4.view.ViewPager
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/mian_pager_viewPager"
-        android:layout_above="@id/mian_pager_rel"></android.support.v4.view.ViewPager>
+        android:layout_above="@id/mian_pager_rel"
+        android:id="@+id/main_pager_frg">
 
+    </FrameLayout>
+
+    <com.bw.movie.wight.CustomViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mian_pager_rel"
+        android:id="@+id/main_pager_vp"></com.bw.movie.wight.CustomViewPager>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +25,7 @@
         android:id="@+id/mian_pager_rel"
         android:layout_alignParentBottom="true">
         <ImageView
-            android:id="@+id/img_filmButton"
+            android:id="@+id/main_pager_btn1"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@mipmap/com_icon_cinema_default_hdpi"
@@ -27,7 +34,7 @@
             android:layout_marginLeft="15dp"
             />
         <ImageView
-            android:id="@+id/img_cinemaButton"
+            android:id="@+id/main_pager_btn2"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@mipmap/com_icon_film_fault_hdpi"
@@ -36,7 +43,7 @@
             android:layout_marginBottom="15dp"
             />
         <ImageView
-            android:id="@+id/img_userButton"
+            android:id="@+id/main_pager_btn3"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@mipmap/com_icon_my_default_hdip"
