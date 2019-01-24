@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mian_pager_viewPager"
+        android:layout_above="@id/mian_pager_rel"></android.support.v4.view.ViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/mian_pager_rel"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/img_filmButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/com_icon_cinema_default_hdpi"
+            android:background="#00FFFFFF"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            />
+        <ImageView
+            android:id="@+id/img_cinemaButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/com_icon_film_fault_hdpi"
+            android:layout_centerHorizontal="true"
+            android:background="#00FFFFFF"
+            android:layout_marginBottom="15dp"
+            />
+        <ImageView
+            android:id="@+id/img_userButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@mipmap/com_icon_my_default_hdip"
+            android:layout_alignParentRight="true"
+            android:background="#00FFFFFF"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>
