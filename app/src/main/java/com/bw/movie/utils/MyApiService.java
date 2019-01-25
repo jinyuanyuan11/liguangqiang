@@ -7,6 +7,8 @@ import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
+import retrofit2.http.FieldMap;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.POST;
@@ -24,18 +26,19 @@ import rx.Observable;
  */
 public interface MyApiService {
     @GET
-    Observable<ResponseBody> get(@Url String murl,@HeaderMap Map<String,Object> headermap,@QueryMap Map<String,Object> map);
+    Observable<ResponseBody> get(@Url String murl, @HeaderMap HashMap<String, Object> headermap, @QueryMap HashMap<String, Object> map);
 
+    @FormUrlEncoded
     @POST
-    Observable<ResponseBody> post(@Url String murl, @HeaderMap HashMap<String, String> headermap, @QueryMap HashMap<String, String> map);
+    Observable<ResponseBody> post(@Url String murl, @HeaderMap HashMap<String, Object> headermap, @FieldMap HashMap<String, Object> map);
 
     @PUT
-    Observable<ResponseBody> put(@Url String url,@HeaderMap Map<String,Object> headermap,@QueryMap Map<String,Object> map);
+    Observable<ResponseBody> put(@Url String url, @HeaderMap Map<String, Object> headermap, @QueryMap Map<String, Object> map);
 
     @DELETE
-    Observable<ResponseBody> delete(@Url String url,@HeaderMap Map<String,Object> headermap,@QueryMap Map<String,Object> map);
+    Observable<ResponseBody> delete(@Url String url, @HeaderMap Map<String, Object> headermap, @QueryMap Map<String, Object> map);
 
     @POST
-    Observable<ResponseBody> Image(@Url String url, @HeaderMap Map<String,Object> headermap,@Body MultipartBody body);
+    Observable<ResponseBody> Image(@Url String url, @HeaderMap Map<String, Object> headermap, @Body MultipartBody body);
 
 }

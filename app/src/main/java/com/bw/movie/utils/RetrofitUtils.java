@@ -1,6 +1,7 @@
 package com.bw.movie.utils;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -64,9 +65,34 @@ public class RetrofitUtils {
     }
 
 
-
-    public RetrofitUtils get(String url, Map<String, Object> head,Map<String,Object>map)
+    //get请求
+    public RetrofitUtils get(String url, HashMap<String, Object> head, HashMap<String, Object> map,final HttpListtener httpListtener)
     {
+        Observer observer = new Observer<ResponseBody>(){
+
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                if(httpListtener!=null){
+                    httpListtener.OnError(e.getMessage());
+                }
+            }
+
+            @Override
+            public void onNext(ResponseBody responseBody) {
+                if(httpListtener!=null){
+                    try {
+                        httpListtener.OnSuccess(responseBody.string());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
         //请求网络放在子线程
         myApiService.get(url,head,map).subscribeOn(Schedulers.io())
                 //成功后回调到主线程（observeOn）是观察者
@@ -77,8 +103,34 @@ public class RetrofitUtils {
         return RetrofitUtils.getInstance();
     }
 
-    public RetrofitUtils post(String url, HashMap<String, String> head, HashMap<String, String> map)
+    //post请求
+    public RetrofitUtils post(String url, HashMap<String, Object> head, HashMap<String, Object> map,final HttpListtener httpListtener)
     {
+        Observer observer = new Observer<ResponseBody>(){
+
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                if(httpListtener!=null){
+                    httpListtener.OnError(e.getMessage());
+                }
+            }
+
+            @Override
+            public void onNext(ResponseBody responseBody) {
+                if(httpListtener!=null){
+                    try {
+                        httpListtener.OnSuccess(responseBody.string());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
         if(map==null)
         {
             map=new HashMap<>();
@@ -89,8 +141,33 @@ public class RetrofitUtils {
                 .subscribe(observer);
         return RetrofitUtils.getInstance();
     }
+    //图片请求
+    public RetrofitUtils image(String murl,Map<String,Object> headermap,Map<String,Object> map,List<Object> list,final HttpListtener httpListtener){
+        Observer observer = new Observer<ResponseBody>(){
 
-    public RetrofitUtils image(String murl,Map<String,Object> headermap,Map<String,Object> map,List<Object> list){
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                if(httpListtener!=null){
+                    httpListtener.OnError(e.getMessage());
+                }
+            }
+
+            @Override
+            public void onNext(ResponseBody responseBody) {
+                if(httpListtener!=null){
+                    try {
+                        httpListtener.OnSuccess(responseBody.string());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        };
         MultipartBody.Builder builder = new MultipartBody.Builder().setType(MultipartBody.FORM);
         builder.addFormDataPart("uid",String.valueOf(map.get("uid")));
         if (list.size()==1) {
@@ -108,35 +185,7 @@ public class RetrofitUtils {
 
 
 
-    public Observer observer=new Observer<ResponseBody>() {
-        //关闭
-        @Override
-        public void onCompleted() {
 
-        }
-
-        //失败
-        @Override
-        public void onError(Throwable e) {
-            if(httpListtener!=null)
-            {
-                httpListtener.OnError(e.getMessage());
-            }
-        }
-
-        //成功
-        @Override
-        public void onNext(ResponseBody responseBody) {
-            if(httpListtener!=null)
-            {
-                try {
-                    httpListtener.OnSuccess(responseBody.string());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    };
 
 
     //自定义接口
@@ -145,12 +194,6 @@ public class RetrofitUtils {
         void OnSuccess(String jsonStr);
 
         void OnError(String error);
-    }
-
-    private HttpListtener httpListtener;
-
-    public void setHttpListtener(HttpListtener listtener) {
-        this.httpListtener = listtener;
     }
 
 }

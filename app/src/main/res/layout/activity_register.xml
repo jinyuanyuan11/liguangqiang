@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bitmap">
+
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/register_nickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@mipmap/register_icon_name_default_hdpi"
+            android:drawablePadding="20dp"
+            android:hint=" 昵称"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="16sp"
+            android:theme="@style/MyEdTextWidth" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel1"
+        android:layout_marginTop="10dp">
+
+        <com.xw.repo.XEditText
+
+            android:id="@+id/register_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@mipmap/register_icon_sex_default_hdpi"
+            android:drawablePadding="20dp"
+            android:hint=" 性别"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="16sp"
+            android:theme="@style/MyEdTextWidth" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel2"
+        android:layout_marginTop="10dp">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/register_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@mipmap/register_icon_date_default_hdpi"
+            android:drawablePadding="20dp"
+            android:hint="出生日期"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="16sp"
+            android:theme="@style/MyEdTextWidth" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel3"
+        android:layout_marginTop="10dp">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/register_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@mipmap/register_icon_phone_default_hdpi"
+            android:drawablePadding="20dp"
+            android:hint="  手机号"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="16sp"
+            android:theme="@style/MyEdTextWidth" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel4"
+        android:layout_marginTop="10dp">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@mipmap/register_icon_mail_default_hdpi"
+            android:drawablePadding="20dp"
+            android:hint="邮箱"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="16sp"
+            android:theme="@style/MyEdTextWidth" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel5"
+        android:layout_marginTop="10dp">
+
+        <com.xw.repo.XEditText
+            android:id="@+id/register_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:drawableLeft="@mipmap/register_icon_lock_default_hdpi"
+            android:drawablePadding="20dp"
+            android:hint="  登录密码"
+            android:paddingBottom="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#fff"
+            android:textSize="16sp"
+            android:theme="@style/MyEdTextWidth" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_marginTop="78dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel6"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="注册"
+        android:background="@drawable/register_button"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

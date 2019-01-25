@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="158dp"
+        android:layout_height="213dp">
+
+    <ImageView
+        android:id="@+id/simp_cinema_flow"
+        android:layout_width="158dp"
+        android:layout_height="213dp" />
+
+    <LinearLayout
+        android:layout_width="156dp"
+        android:layout_height="32dp"
+        android:alpha="0.7"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/loop_style"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_cinema_flow1"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/text_cinema_flow2"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

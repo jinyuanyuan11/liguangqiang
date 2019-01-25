@@ -22,7 +22,22 @@ public class PresenterImpl implements MyInterface.Presenter {
     }
 
     @Override
-    public void startRequest(String url, HashMap<String, String> head,HashMap<String, String> map, Class kind) {
+    public void startRequest(String url, HashMap<String, Object> head,HashMap<String, Object> map, Class kind) {
+        model.getData(url, head, map, kind, new MyInterface.MyCallBack() {
+            @Override
+            public void onSuccess(Object data) {
+                myView.onRequestOk(data);
+            }
+
+            @Override
+            public void onError(String error) {
+                myView.onRequestNo(error);
+            }
+        });
+    }
+
+    @Override
+    public void postData(String url, HashMap<String, Object> head, HashMap<String, Object> map, Class kind) {
         model.getData(url, head, map, kind, new MyInterface.MyCallBack() {
             @Override
             public void onSuccess(Object data) {

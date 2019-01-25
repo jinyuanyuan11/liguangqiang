@@ -18,7 +18,7 @@ public interface MyInterface {
     }
 
     interface Model {
-        void getData(String url, HashMap<String, String> head,HashMap<String, String> map, Class kind, MyCallBack myCallBack);
+        void getData(String url, HashMap<String, Object> head,HashMap<String, Object> map, Class kind, MyCallBack myCallBack);
     }
 
     interface MyView<T> {
@@ -28,6 +28,7 @@ public interface MyInterface {
     }
 
     interface Presenter {
-        void startRequest(String url,HashMap<String, String> head, HashMap<String, String> map, Class kind);
+        void startRequest(String url,HashMap<String, Object> head, HashMap<String, Object> map, Class kind);
+        void postData(String url,HashMap<String, Object> head, HashMap<String, Object> map, Class kind);
     }
 }

@@ -15,6 +15,7 @@ import com.bw.movie.fragment.Fragment_Film;
 import com.bw.movie.fragment.Fragment_MySelf;
 import com.bw.movie.wight.CustomViewPager;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -29,18 +30,11 @@ public class MainPagerActivity extends BaseActivity {
     ImageView mainPagerBtn2;
     @BindView(R.id.main_pager_btn3)
     ImageView mainPagerBtn3;
-    @BindView(R.id.mian_pager_rel)
-    RelativeLayout mianPagerRel;
-    @BindView(R.id.main_pager_vp)
-    CustomViewPager mainPagerVp;
+
     private BaseImmerse baseImmerse;
 
     private FragmentManager manager;
-    private Fragment_Film fragment_film;
-    private Fragment_Cinema fragmentCinema;
-    private Fragment_MySelf fragmentMySelf;
 
-    private List<Fragment> fragments;
 
 
     @Override
@@ -56,7 +50,7 @@ public class MainPagerActivity extends BaseActivity {
         baseImmerse.setRootViewFitsSystemWindows(MainPagerActivity.this, true);
         ButterKnife.bind(this);
         manager = getSupportFragmentManager();
-
+        manager.beginTransaction().replace(R.id.main_pager_frg, new Fragment_Film()).commit();
 
     }
 
@@ -75,21 +69,15 @@ public class MainPagerActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.main_pager_btn1:
-                manager.beginTransaction().replace(R.id.main_pager_frg, fragment_film).commit();
+                manager.beginTransaction().replace(R.id.main_pager_frg, new Fragment_Film()).commit();
                 break;
             case R.id.main_pager_btn2:
-                manager.beginTransaction().replace(R.id.main_pager_frg, null).commit();
+                manager.beginTransaction().replace(R.id.main_pager_frg, new Fragment_Cinema()).commit();
                 break;
             case R.id.main_pager_btn3:
-                manager.beginTransaction().replace(R.id.main_pager_frg, null).commit();
+                manager.beginTransaction().replace(R.id.main_pager_frg, new Fragment_MySelf()).commit();
                 break;
         }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }

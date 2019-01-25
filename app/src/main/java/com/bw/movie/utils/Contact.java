@@ -10,6 +10,9 @@ public class Contact {
     public static final String BASE_URL = "http://172.17.8.100/movieApi/";
     //注册
     public static final String USER_REGISTER = "user/v1/registerUser";
+    //查询附近影院
+    public static final String User_NEAR = "cinema/v1/findNearbyCinemas";
+
     //登录
     public static final String USER_LOGIN = "user/v1/login";
     //查询会员首页信息
