@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/loginPager"
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:id="@+id/photo_img1"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/photo_img2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+            android:id="@+id/photo_img3"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="20dp"
+            android:scaleType="fitXY"
+            android:id="@+id/photo_img4"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:id="@+id/photo_img5"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:id="@+id/photo_img6"/>
+    </LinearLayout>
+</LinearLayout>

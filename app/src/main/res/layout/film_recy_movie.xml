@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门电影"
+        android:layout_below="@id/loop_movie_progressBar"
+        android:layout_marginTop="20dp"
+        android:id="@+id/film_pager_dingwei_tv"
+        android:layout_marginLeft="30dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/dingwei2"
+        android:layout_below="@id/film_pager_dingwei_tv"
+        android:layout_marginTop="5dp">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:background="@drawable/alpha_style"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true">
+
+        </View>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/com_icon_next_default_hdpi"
+            android:layout_alignParentRight="true"
+            android:id="@+id/all_host"
+            android:layout_marginRight="50dp" />
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dingwei2"
+        android:id="@+id/host_recy"
+        android:layout_marginTop="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在上映"
+        android:id="@+id/dingwei3"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/host_recy"
+        android:layout_marginLeft="30dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/dingwei4"
+        android:layout_below="@id/dingwei3"
+        android:layout_marginTop="5dp">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:background="@drawable/alpha_style"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true">
+
+        </View>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/com_icon_next_default_hdpi"
+            android:layout_alignParentRight="true"
+            android:id="@+id/all_ing"
+            android:layout_marginRight="50dp" />
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Ing_recy"
+        android:layout_below="@+id/dingwei4"
+        android:layout_marginTop="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="即将上映"
+        android:id="@+id/diongwei"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/Ing_recy"
+        android:layout_marginLeft="30dp"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/dingwei5"
+        android:layout_below="@id/diongwei"
+
+        android:layout_marginTop="5dp">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:background="@drawable/alpha_style"
+            android:layout_marginLeft="30dp"
+            android:layout_centerVertical="true">
+
+        </View>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/com_icon_next_default_hdpi"
+            android:layout_alignParentRight="true"
+            android:id="@+id/all_now"
+            android:layout_marginRight="50dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/soon_recy"
+        android:layout_below="@+id/dingwei5"
+        android:layout_marginTop="15dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

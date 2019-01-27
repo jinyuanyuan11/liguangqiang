@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:src="@mipmap/movie_hdpi"/>
+
+    <recycler.coverflow.RecyclerCoverFlow
+        android:id="@+id/rcf_cinema_flow"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:background="@drawable/search_edittext"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="32dp"
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/com_icon_search_default_hdpi"
+                android:layout_marginLeft="7dp"
+                />
+            <EditText
+                android:id="@+id/et_search_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:hint="请输入要搜索的影片"
+                android:textSize="11sp"
+                android:background="@null"
+                android:textColor="#f1f3f1"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="搜索"
+                android:textColor="#fff"
+                android:textSize="12sp"
+                android:layout_marginRight="24dp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="48dp"
+            android:background="@null"
+            android:layout_height="48dp"
+            android:src="@mipmap/cinema_detail_icon_location_default_hdpi"
+            android:id="@+id/film_pager_get_address"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:visibility="invisible"
+            android:layout_toRightOf="@id/film_pager_get_address"
+            android:layout_centerVertical="true"
+            android:id="@+id/film_pager_get_jing"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/film_pager_get_address"
+            android:id="@+id/film_pager_get_wei"/>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="312dp"
+        android:layout_height="3dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/loop_movie_progressBar"
+        android:layout_below="@id/rcf_cinema_flow"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:background="@drawable/proggress_style"/>
+</RelativeLayout>

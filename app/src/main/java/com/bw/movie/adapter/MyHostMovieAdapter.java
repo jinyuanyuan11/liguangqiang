@@ -34,15 +34,24 @@ public class MyHostMovieAdapter extends RecyclerView.Adapter<MyHostMovieAdapter.
     @NonNull
     @Override
     public MyHostMovieAdapter.Viewholer onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        //View view=LayoutInflater.from(mContext).inflate(R.layout.host_movie_item,null,false);
         View view=View.inflate(mContext, R.layout.host_movie_item,null);
         Viewholer viewholer=new Viewholer(view);
         return viewholer;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHostMovieAdapter.Viewholer viewholer, int i) {
+    public void onBindViewHolder(@NonNull MyHostMovieAdapter.Viewholer viewholer, final int i) {
         Glide.with(mContext).load(mList.get(i).getImageUrl()).into(viewholer.host_movie_img);
+        viewholer.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checkItem!=null)
+                {
+                    checkItem.setItemCheck(v,mList.get(i).getId());
+                }
+            }
+        });
+
     }
 
     @Override
@@ -56,5 +65,15 @@ public class MyHostMovieAdapter extends RecyclerView.Adapter<MyHostMovieAdapter.
             super(itemView);
             host_movie_img=itemView.findViewById(R.id.host_movie_img);
         }
+    }
+
+    public interface CheckItem {
+        void setItemCheck(View view,int i);
+    }
+
+    private CheckItem checkItem;
+
+    public void setCheckItem(CheckItem checkItem) {
+        this.checkItem = checkItem;
     }
 }

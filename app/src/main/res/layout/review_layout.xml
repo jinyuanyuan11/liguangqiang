@@ -6,6 +6,6 @@
     <com.jcodecraeer.xrecyclerview.XRecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/film_pager_recy"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+        android:id="@+id/review_recy"></com.jcodecraeer.xrecyclerview.XRecyclerView>
 
 </LinearLayout>

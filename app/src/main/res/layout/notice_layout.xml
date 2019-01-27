@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginPager">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/notice_layout_diwei">
+
+        <TextView
+            android:id="@+id/diwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预告片" />
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="3dp"
+            android:layout_below="@id/diwei"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/alpha_style">
+
+        </View>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:src="@mipmap/com_icon_down_default_hdpi"
+            android:id="@+id/notice_layout_down"/>
+
+    </RelativeLayout>
+
+    <cn.jzvd.JZVideoPlayerStandard
+        android:id="@+id/jcvideoplayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/notice_layout_diwei"></cn.jzvd.JZVideoPlayerStandard>
+
+
+</RelativeLayout>

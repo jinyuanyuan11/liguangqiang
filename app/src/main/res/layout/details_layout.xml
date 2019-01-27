@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.jcodecraeer.xrecyclerview.XRecyclerView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/film_pager_recy"></com.jcodecraeer.xrecyclerview.XRecyclerView>
+        android:id="@+id/details_layout_recy"></android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

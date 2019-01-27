@@ -1,5 +1,7 @@
 package com.bw.movie.utils;
 
+import android.util.Log;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -78,6 +80,7 @@ public class RetrofitUtils {
             @Override
             public void onError(Throwable e) {
                 if(httpListtener!=null){
+                    Log.e("zzz", "onError: "+e.getMessage() );
                     httpListtener.OnError(e.getMessage());
                 }
             }

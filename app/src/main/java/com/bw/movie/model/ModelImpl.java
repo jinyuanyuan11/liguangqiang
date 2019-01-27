@@ -23,6 +23,7 @@ public class ModelImpl implements MyInterface.Model {
         RetrofitUtils.getInstance().get(url, head, map, new RetrofitUtils.HttpListtener() {
             @Override
             public void OnSuccess(String jsonStr) {
+                Log.e("zzz", "OnSuccess: "+kind );
                 Log.e("zzz", "OnSuccess: "+jsonStr );
                 Object o = gson.fromJson(jsonStr, kind);
                 myCallBack.onSuccess(o);

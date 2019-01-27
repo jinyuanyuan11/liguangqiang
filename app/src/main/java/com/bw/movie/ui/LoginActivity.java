@@ -23,6 +23,7 @@ import com.bw.movie.presenter.PresenterImpl;
 import com.bw.movie.utils.Contact;
 import com.bw.movie.utils.EncryptUtil;
 
+import com.bw.movie.utils.SpUtil;
 import com.xw.repo.XEditText;
 
 import java.util.HashMap;
@@ -122,8 +123,13 @@ public class LoginActivity  extends BaseActivity implements MyInterface.MyView {
             Log.d("loginBeanddd", "onSuccess: "+loginBean.getMessage());
                 if(loginBean.getMessage().equals("登陆成功"))
                 {
+                    Log.d("zzz",loginBean.getResult().getUserId()+"");
+                    Log.d("zzz",loginBean.getResult().getSessionId()+"");
+                 //   SpUtil.put("userId",loginBean.getResult().getUserId());
+                  //  SpUtil.put("sessionId",loginBean.getResult().getSessionId());
                    Intent intent=new Intent(LoginActivity.this,MainPagerActivity.class);
                    startActivity(intent);
+
                 }
 
 

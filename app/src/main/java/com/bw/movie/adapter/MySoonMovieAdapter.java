@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bw.movie.R;
 import com.bw.movie.bean.MyElseMovie;
-import com.bw.movie.bean.MyHostMovie;
+import com.bw.movie.bean.MySoonMovie;
 
 import java.util.List;
 
@@ -21,25 +21,25 @@ import java.util.List;
  * <p>更改时间：2019/1/2514:29<p>
  * <p>版本号：1<p>
  */
-public class MIngMovieAdapter extends RecyclerView.Adapter<MIngMovieAdapter.Viewholer> {
-    private List<MyElseMovie.ResultBean>mList;
+public class MySoonMovieAdapter extends RecyclerView.Adapter<MySoonMovieAdapter.Viewholer> {
+    private List<MySoonMovie.ResultBean>mList;
     private Context mContext;
 
-    public MIngMovieAdapter(List<MyElseMovie.ResultBean> mList, Context mContext) {
+    public MySoonMovieAdapter(List<MySoonMovie.ResultBean> mList, Context mContext) {
         this.mList = mList;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public MIngMovieAdapter.Viewholer onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public MySoonMovieAdapter.Viewholer onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view=View.inflate(mContext, R.layout.host_movie_item,null);
         Viewholer viewholer=new Viewholer(view);
         return viewholer;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MIngMovieAdapter.Viewholer viewholer, final int i) {
+    public void onBindViewHolder(@NonNull MySoonMovieAdapter.Viewholer viewholer, final int i) {
         Glide.with(mContext).load(mList.get(i).getImageUrl()).into(viewholer.host_movie_img);
         viewholer.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

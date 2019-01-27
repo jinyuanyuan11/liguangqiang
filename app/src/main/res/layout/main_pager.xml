@@ -3,35 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.MainActivity"
+    >
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/mian_pager_rel"
         android:id="@+id/main_pager_frg">
 
     </FrameLayout>
 
-    <com.bw.movie.wight.CustomViewPager
+
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/mian_pager_rel"
-        android:id="@+id/main_pager_vp"></com.bw.movie.wight.CustomViewPager>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/mian_pager_rel"
-        android:layout_alignParentBottom="true">
+        android:layout_height="100dp"
+        android:background="@drawable/switch_gradual"
+        android:layout_alignParentBottom="true"
+        ></View>
+
         <ImageView
             android:id="@+id/main_pager_btn1"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@mipmap/com_icon_cinema_default_hdpi"
-            android:background="#00FFFFFF"
             android:layout_marginBottom="15dp"
             android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true"
             />
         <ImageView
             android:id="@+id/main_pager_btn2"
@@ -39,7 +36,7 @@
             android:layout_height="65dp"
             android:src="@mipmap/com_icon_film_fault_hdpi"
             android:layout_centerHorizontal="true"
-            android:background="#00FFFFFF"
+            android:layout_alignParentBottom="true"
             android:layout_marginBottom="15dp"
             />
         <ImageView
@@ -48,11 +45,9 @@
             android:layout_height="65dp"
             android:src="@mipmap/com_icon_my_default_hdip"
             android:layout_alignParentRight="true"
-            android:background="#00FFFFFF"
+            android:layout_alignParentBottom="true"
             android:layout_marginBottom="15dp"
             android:layout_marginRight="15dp"
             />
-    </RelativeLayout>
-
 
 </RelativeLayout>

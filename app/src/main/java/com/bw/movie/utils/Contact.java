@@ -7,7 +7,7 @@ package com.bw.movie.utils;
  */
 public class Contact {
     //总接口
-    public static final String BASE_URL = "http://172.17.8.100/movieApi/";
+    public static final String BASE_URL = "http://mobile.bwstudent.com/movieApi/";
     //注册
     public static final String USER_REGISTER = "user/v1/registerUser";
     //查询附近影院
